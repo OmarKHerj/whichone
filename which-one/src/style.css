@@ -1,0 +1,887 @@
+.all {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: __backgroundColor__;
+  flex-basis: 100%;
+  overflow-y: auto;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.all2 {
+  position: relative;
+  width: 1343px;
+  height: 1935px;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.navbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1340px;
+  height: 60px;
+  max-height: 100%;
+  place-content: center;
+  align-items: center;
+  gap: 434px;
+  background-color: #fff;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.logo {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  position: relative;
+  width: 129px;
+  height: 50px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.name {
+  color: #000;
+  font-size: 29px;
+  font-weight: 900;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.navitems {
+  width: min-content;
+  height: min-content;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.compareContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: min-content;
+  height: min-content;
+  padding: 16px 20px;
+}
+
+.compare {
+  color: #00000080;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+
+}
+
+.dealsContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: min-content;
+  height: min-content;
+  padding: 16px 20px;
+}
+
+.deals {
+  color: #00000080;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.howtoContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: min-content;
+  height: min-content;
+  padding: 16px 20px;
+}
+
+.howto {
+  color: #00000080;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.aboutusContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: min-content;
+  height: min-content;
+  padding: 16px 20px;
+}
+
+.aboutus {
+  color: #00000080;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.signupContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: min-content;
+  height: min-content;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+.signup {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  position: absolute;
+  left: 0;
+  top: 1537px;
+  width: 1343px;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0px;
+  background-color: #000;
+}
+
+.footeritems {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 56px;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.topFooter {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: 1152px;
+  height: min-content;
+  place-content: space-between;
+  align-items: center;
+}
+
+.footerLogo {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  position: relative;
+  width: 129px;
+  height: 50px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.footerLogoName {
+  color: #fff;
+  font-size: 29px;
+  font-weight: 900;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.Inc {
+  color: #ffffff80;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.socialmedia {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: min-content;
+  height: min-content;
+  align-items: flex-start;
+  gap: 37px;
+}
+
+.youtubeConatiner {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  align-items: flex-start;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.youtube {
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(../public/hdYoutubeLogoPngTransparentBac.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.instaContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.insta {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(../public/_580b57fcd9996e24bc43c5211.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.twitterContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.twitter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(../public/twitterIconDownload181.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.line {
+  width: 1152px;
+  max-width: 100%;
+  height: 1px;
+  max-height: 100%;
+  overflow: visible;
+}
+
+.lineCharact {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+}
+
+.links {
+  width: 1144px;
+  height: min-content;
+  align-items: center;
+  gap: 213px;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.Links3 {
+  width: 247px;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.link {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  text-decoration: underline;
+  width: 161px;
+  height: min-content;
+  flex-direction: column;
+}
+
+.main {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  left: 104px;
+  top: 472px;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.categorySelection {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: min-content;
+  height: min-content;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tags {
+  width: min-content;
+  height: min-content;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.selected {
+  align-self: flex-start;
+  padding: 12px 18px;
+  background-color: #000;
+  width: min-content;
+  height: min-content;
+  border-radius: 27.027px;
+}
+
+.unSelected {
+  align-self: flex-start;
+  padding: 12px 18px;
+  background-color: #f2f1f1;
+  width: min-content;
+  height: min-content;
+  border-radius: 27.027px;
+}
+
+.selectedFont {
+  color: #eaeaea;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.unSelectedFont {
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.listing {
+  width: 1152px;
+  height: min-content;
+  align-items: flex-start;
+  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, 400px);
+}
+
+.relateListing {
+  width: 1152px;
+  height: min-content;
+  align-items: flex-start;
+  gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Two columns */
+}
+
+.post {
+  width: 270px;
+  height: min-content;
+  flex-direction: column;
+  gap: -10px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.postImg {
+  height: 188px;
+  align-self: stretch;
+  background-image: url(../public/capture1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.postText {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  background-color: #eaeaea;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  place-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.postCategoryColor {
+  width: min-content;
+  height: min-content;
+  padding: 2.7027px 5.4054px;
+  border-radius: 27.027px;
+  background-color: #df4949;
+}
+
+.postCategory {
+  color: #000;
+  font-size: 16.2162px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.postTitle {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+.postReadContainer {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  opacity: 0.6;
+  padding: 11.6692px 14.5865px;
+  border-radius: 5.8346px;
+  width: min-content;
+  height: min-content;
+  background-color: #404040;
+}
+
+.postRead {
+  color: #fff;
+  font-size: 13.1278px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.title {
+  color: #000;
+  font-size: 36px;
+  font-weight: 900;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 105px;
+  top: 85px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.mainPost {
+  position: absolute;
+  left: 125px;
+  top: 143px;
+  width: 1100px;
+  height: min-content;
+  align-items: center;
+  gap: 24px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #eaeaea;
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.related {
+  position: absolute;
+  left: 104px;
+  top: 1100px;
+  width: 1152px;
+  height: min-content;
+  align-items: center;
+  gap: 24px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #eaeaea;
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.mainPostItems {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: 434px;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 40px;
+}
+
+.mainPostTitle {
+  color: #000;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+.mainPostDiscr {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+.mainPostReadContainer {
+  height: min-content;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: #000;
+  width: 133px;
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.mainPostRead {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: initial;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+}
+
+.mainPostImg {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  flex: 1;
+  align-self: stretch;
+  border-radius: 16px;
+  background-color: #3e3e3e;
+}
