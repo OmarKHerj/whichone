@@ -10,7 +10,7 @@ export default function Home() {
                     <Navbar />
                     <Main />
                     <Listing />
-                    <h1>test</h1>
+                    
                     <Footer />
             </div>
         </>
