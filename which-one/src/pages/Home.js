@@ -1,18 +1,14 @@
-import Navbar from "../componentes/navbar";
-import Main from "../componentes/main";
-import Listing from "../componentes/listing";
-import Footer from "../componentes/footer";
+import Navbar from "../componentes/navbar.js";
+import Main from "../componentes/main.js";
+import Listing from "../componentes/listing.js";
+import Footer from "../componentes/footer.js";
+import { useEffect } from 'react';
 export default function Home() {
+    useEffect(() => {
+        // Scroll to the top when the component mounts
+        window.scrollTo(0, 0);
+      }, []);
     return (
-        <>
-            <div className="all">
-                
-                    <Navbar />
-                    <Main />
-                    <Listing />
-                    
-                    <Footer />
-            </div>
-        </>
+        <><Navbar /><Main /><Listing /><Footer /></>
     )
 }

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Blogapp',
     'rest_framework',
+    'corsheaders',
     
     
 ]
@@ -51,9 +52,34 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backapi.urls'
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:3000",
+]
+
+ACCESS_CONTROL_ALLOW_METHODS = [
+    "GET",
+]
+
+ACCESS_CONTROL_ALLOW_CREDENTIALS = True
+
+
+CORS_ALLOW_HEADERS = [
+    'access-control-allow-origin',
+    'access-control-allow-headers',
+    'access-control-allow-methods',
+    'access-control-allow-credentials',
+    'authorization',
+    'content-type',
+    'vary',
+    # ... other headers
+]
 
 TEMPLATES = [
     {
@@ -118,6 +144,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+CORS_ALLOW_ALL_ORIGINS = False
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'C:/Users/HP/whichone/backend/backapi'
 
 STATIC_URL = 'static/'
 
