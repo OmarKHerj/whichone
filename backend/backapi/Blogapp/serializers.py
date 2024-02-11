@@ -11,6 +11,11 @@ class CategorySerializer(serializers.ModelSerializer):
         
         
 class PostSerializer(serializers.ModelSerializer):
+    category_names = serializers.SerializerMethodField()
+
     class Meta:
         model = Post
-        fields = '__all__'
+        fields = ['id', 'title', 'description', 'image', 'category_names',]
+
+    def get_category_names(self, obj):
+        return [category.name for category in obj.category.all()]
