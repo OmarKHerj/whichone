@@ -3,40 +3,27 @@
 
 export default function Footer() {
     return (
-        <footer className="footers">
-            <div className="footeritems">
-                <div className="topFooter">
-                    <div className="footerLogo">
-                    <div className="footerLogoName">LOGO</div>
-                </div>
-                    <div className="Inc">© 2017-2023 WhichOne Inc.</div>
-                    <div className="socialmedia">
-                        <div className="youtubeContainer"><div className="youtube"></div></div>
-                        <div className="instaContainer"><div className="insta"></div></div>
-                        <div className="twitterContainer"><div className="twitter"></div></div>
-                    </div>
-                </div>
-                <div className="line">
-                    <svg preserveAspectRatio="none" className="lineCharact" viewBox="0 0 1152 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1152" stroke="white"></path></svg>
-                </div>
-                <div className="links">
-                    <div className="Links3">
-                        <div className="link">Link 1</div>
-                        <div className="link">Link 2</div>
-                        <div className="link">Link 3</div>
-                    </div>
-                    <div className="Links3">
-                        <div className="link">Link 1</div>
-                        <div className="link">Link 2</div>
-                        <div className="link">Link 3</div>
-                    </div>
-                    <div className="Links3">
-                    <div className="link">Link 1</div>
-                    <div className="link">Link 2</div>
-                    <div className="link">Link 3</div>
-                </div>
-                </div>
+        <footer>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <ul className="social-icons">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Behance</a></li>
+              <li><a href="#">Linkedin</a></li>
+              <li><a href="#">Dribbble</a></li>
+            </ul>
+          </div>
+          <div className="col-lg-12">
+            <div className="copyright-text">
+              <p>Copyright 2020 Stand Blog Co.
+                    
+                 | Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a></p>
             </div>
-        </footer>
+          </div>
+        </div>
+      </div>
+    </footer>
     )
 }

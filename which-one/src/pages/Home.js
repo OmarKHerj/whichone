@@ -9,6 +9,17 @@ export default function Home() {
         window.scrollTo(0, 0);
       }, []);
     return (
-        <><Navbar /><Main /><Listing /><Footer /></>
+        <>
+            <div id="preloader">
+                <div className="jumper">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <Navbar />
+            <Main />
+            <Listing />
+            <Footer /></>
     )
 }

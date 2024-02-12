@@ -1,16 +1,113 @@
-
+import bannerItem01 from '../assets/images/banner-item-01.jpg';
+import bannerItem02 from '../assets/images/banner-item-02.jpg';
+import bannerItem03 from '../assets/images/banner-item-03.jpg';
+import bannerItem04 from '../assets/images/banner-item-04.jpg';
+import bannerItem05 from '../assets/images/banner-item-05.jpg';
+import bannerItem06 from '../assets/images/banner-item-06.jpg';
 
 export default function Main() {
     return (
-        <><div className="title">BLOG</div>
-            <div className="mainPost">
-                <div className="mainPostItems">
-                    <div className="mainPostTitle">Article Name - Headline of an article</div>
-                    <div className="mainPostDiscr">Short discription</div>
-                    <div className="mainPostReadContainer"><div className="mainPostRead">Read More</div></div>
+        <div className="main-banner header-text">
+      <div className="container-fluid">
+        <div className="owl-banner owl-carousel">
+          <div className="item">
+            <img src={bannerItem01} alt=""/>
+            <div className="item-content">
+              <div className="main-content">
+                <div className="meta-category">
+                  <span>Fashion</span>
                 </div>
-                <div className="mainPostImg"></div>
+                <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
+                <ul className="post-info">
+                  <li><a href="#">Admin</a></li>
+                  <li><a href="#">May 12, 2020</a></li>
+                  <li><a href="#">12 Comments</a></li>
+                </ul>
+              </div>
             </div>
-        </>
+          </div>
+          <div className="item">
+            <img src={bannerItem02} alt=""/>
+            <div className="item-content">
+              <div className="main-content">
+                <div className="meta-category">
+                  <span>Nature</span>
+                </div>
+                <a href="post-details.html"><h4>Donec porttitor augue at velit</h4></a>
+                <ul className="post-info">
+                  <li><a href="#">Admin</a></li>
+                  <li><a href="#">May 14, 2020</a></li>
+                  <li><a href="#">24 Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="item">
+            <img src={bannerItem03} alt=""/>
+            <div className="item-content">
+              <div className="main-content">
+                <div className="meta-category">
+                  <span>Lifestyle</span>
+                </div>
+                <a href="post-details.html"><h4>Best HTML Templates on TemplateMo</h4></a>
+                <ul className="post-info">
+                  <li><a href="#">Admin</a></li>
+                  <li><a href="#">May 16, 2020</a></li>
+                  <li><a href="#">36 Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="item">
+            <img src={bannerItem04} alt=""/>
+            <div className="item-content">
+              <div className="main-content">
+                <div className="meta-category">
+                  <span>Fashion</span>
+                </div>
+                <a href="post-details.html"><h4>Responsive and Mobile Ready Layouts</h4></a>
+                <ul className="post-info">
+                  <li><a href="#">Admin</a></li>
+                  <li><a href="#">May 18, 2020</a></li>
+                  <li><a href="#">48 Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="item">
+            <img src={bannerItem05} alt=""/>
+            <div className="item-content">
+              <div className="main-content">
+                <div className="meta-category">
+                  <span>Nature</span>
+                </div>
+                <a href="post-details.html"><h4>Cras congue sed augue id ullamcorper</h4></a>
+                <ul className="post-info">
+                  <li><a href="#">Admin</a></li>
+                  <li><a href="#">May 24, 2020</a></li>
+                  <li><a href="#">64 Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="item">
+            <img src={bannerItem06} alt=""/>
+            <div className="item-content">
+              <div className="main-content">
+                <div className="meta-category">
+                  <span>Lifestyle</span>
+                </div>
+                <a href="post-details.html"><h4>Suspendisse nec aliquet ligula</h4></a>
+                <ul className="post-info">
+                  <li><a href="#">Admin</a></li>
+                  <li><a href="#">May 26, 2020</a></li>
+                  <li><a href="#">72 Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     )
 }
