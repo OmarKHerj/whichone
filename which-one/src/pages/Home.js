@@ -10,16 +10,10 @@ export default function Home() {
       }, []);
     return (
         <>
-            <div id="preloader">
-                <div className="jumper">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
             <Navbar />
             <Main />
             <Listing />
             <Footer /></>
+            
     )
 }

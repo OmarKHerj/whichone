@@ -9,6 +9,7 @@ export default function Listing() {
   // State to track the number of posts to display
   const [postsToShow, setPostsToShow] = useState(8);
 
+  const [recentPosts, setRecentPosts] = useState([]);
   // Effect to fetch data when the component mounts
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,22 @@ export default function Listing() {
     // Call the fetchData function
     fetchData();
   }, []);
+
+  useEffect(() => {
+    const fetchRecentPosts = async () => {
+        try {
+            const response = await fetch(`http://127.0.0.1:8000/`);
+            const data = await response.json();
+            // Assuming data is an array of posts
+            const slicedPosts = data.slice(0, 3); // Get the first three posts
+            setRecentPosts(slicedPosts);
+        } catch (error) {
+            console.error('Error fetching posts:', error);
+        }
+    };
+
+    fetchRecentPosts();
+}, []);
 
   // Function to load more posts
   const loadMorePosts = () => {
@@ -44,13 +61,11 @@ export default function Listing() {
                   <div className="col-lg-12" key={post.id}>
                     <div className="blog-post">
                       <div className="blog-thumb">
-                        <img src={`http://127.0.0.1:8000${post.image}`} alt="" />
+                        <img src={`http://127.0.0.1:8000${post.image}`} alt="" style={{ width: "730px", height: "322px" }}/>
                       </div>
                       <div className="down-content">
                         <span>{post.category_names}</span>
-                        <a href="post-details.html">
                           <h4>{post.title}</h4>
-                        </a>
                         <ul className="post-info">
                           <li>
                             <a href="#">Admin</a>
@@ -134,33 +149,13 @@ export default function Listing() {
                       </div>
                       <div className="content">
                         <ul>
-                          <li>
-                            <a href="post-details.html">
-                              <h5>
-                                Vestibulum id turpis porttitor sapien facilisis
-                                scelerisque
-                              </h5>
-                              <span>May 31, 2020</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="post-details.html">
-                              <h5>
-                                Suspendisse et metus nec libero ultrices varius
-                                eget in risus
-                              </h5>
-                              <span>May 28, 2020</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="post-details.html">
-                              <h5>
-                                Swag hella echo park leggings, shaman cornhole
-                                ethical coloring
-                              </h5>
-                              <span>May 14, 2020</span>
-                            </a>
-                          </li>
+                        {recentPosts.map((post) => (
+                                                    <li key={post.id}>
+                                                        <Link to={`/post/${post.id}`}>
+                                                        <h5>
+                                                            {post.title}
+                                                        </h5></Link>
+                                                    </li>))}
                         </ul>
                       </div>
                     </div>
@@ -172,56 +167,9 @@ export default function Listing() {
                       </div>
                       <div className="content">
                         <ul>
-                          <li>
-                            <a href="#">- Nature Lifestyle</a>
-                          </li>
-                          <li>
-                            <a href="#">- Awesome Layouts</a>
-                          </li>
-                          <li>
-                            <a href="#">- Creative Ideas</a>
-                          </li>
-                          <li>
-                            <a href="#">- Responsive Templates</a>
-                          </li>
-                          <li>
-                            <a href="#">- HTML5 / CSS3 Templates</a>
-                          </li>
-                          <li>
-                            <a href="#">- Creative &amp; Unique</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-12">
-                    <div className="sidebar-item tags">
-                      <div className="sidebar-heading">
-                        <h2>Tag Clouds</h2>
-                      </div>
-                      <div className="content">
-                        <ul>
-                          <li>
-                            <a href="#">Lifestyle</a>
-                          </li>
-                          <li>
-                            <a href="#">Creative</a>
-                          </li>
-                          <li>
-                            <a href="#">HTML5</a>
-                          </li>
-                          <li>
-                            <a href="#">Inspiration</a>
-                          </li>
-                          <li>
-                            <a href="#">Motivation</a>
-                          </li>
-                          <li>
-                            <a href="#">PSD</a>
-                          </li>
-                          <li>
-                            <a href="#">Responsive</a>
-                          </li>
+                          <li><Link to="/compare">- Compare</Link></li>
+                          <li><Link to={"/how-to"}>- How To</Link></li>
+                          <li><Link to={"/deals"}>- Deals</Link></li>
                         </ul>
                       </div>
                     </div>
