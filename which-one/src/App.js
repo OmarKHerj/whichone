@@ -1,6 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Post from "./pages/post.js";
+import Compare from "./pages/compare.js";
+import Howto from "./pages/howto.js";
+import Deals from "./pages/deals.js";
+import Contact from "./pages/contactus.js";
+
+import './style.css';
+
+
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -27,6 +35,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post/:id" element={<Post />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="/how-to" element={<Howto />} />
+          <Route path="/deals" element={<Deals />} />
+          <Route path="/contact" element={<Contact />} /> 
         </Routes>
       </BrowserRouter>
     </div>

@@ -10,7 +10,7 @@ class Category(models.Model):
 
     
     def __str__(self):
-        return self.name.capitalize
+        return self.name.capitalize()
 
 class Post(models.Model):
     title = models.CharField(max_length=200)

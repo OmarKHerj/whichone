@@ -1,113 +1,81 @@
-import bannerItem01 from '../assets/images/banner-item-01.jpg';
-import bannerItem02 from '../assets/images/banner-item-02.jpg';
-import bannerItem03 from '../assets/images/banner-item-03.jpg';
-import bannerItem04 from '../assets/images/banner-item-04.jpg';
-import bannerItem05 from '../assets/images/banner-item-05.jpg';
-import bannerItem06 from '../assets/images/banner-item-06.jpg';
+import "jquery";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "owl.carousel";
+import { useState, useEffect } from "react";
+import OwlCarousel from "react-owl-carousel";
 
 export default function Main() {
-    return (
-        <div className="main-banner header-text">
+  const [randomPosts, setRandomPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRandomPosts = async () => {
+      try {
+        const response = await fetch("http://127.0.0.1:8000/");
+        const data = await response.json();
+
+        const randomIndices = Array.from({ length: 6 }, () =>
+          Math.floor(Math.random() * data.length)
+        );
+        const randomPostsData = randomIndices.map((index) => {
+          const { id, title, image, category_names } = data[index];
+          return { id, title, image, category_names };
+        });
+        setRandomPosts(randomPostsData);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching random posts:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchRandomPosts();
+  }, []);
+
+  return (
+    <div className="main-banner header-text">
       <div className="container-fluid">
-        <div className="owl-banner owl-carousel">
-          <div className="item">
-            <img src={bannerItem01} alt=""/>
-            <div className="item-content">
-              <div className="main-content">
-                <div className="meta-category">
-                  <span>Fashion</span>
-                </div>
-                <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
-                <ul className="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 12, 2020</a></li>
-                  <li><a href="#">12 Comments</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <img src={bannerItem02} alt=""/>
-            <div className="item-content">
-              <div className="main-content">
-                <div className="meta-category">
-                  <span>Nature</span>
-                </div>
-                <a href="post-details.html"><h4>Donec porttitor augue at velit</h4></a>
-                <ul className="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 14, 2020</a></li>
-                  <li><a href="#">24 Comments</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <img src={bannerItem03} alt=""/>
-            <div className="item-content">
-              <div className="main-content">
-                <div className="meta-category">
-                  <span>Lifestyle</span>
-                </div>
-                <a href="post-details.html"><h4>Best HTML Templates on TemplateMo</h4></a>
-                <ul className="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 16, 2020</a></li>
-                  <li><a href="#">36 Comments</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <img src={bannerItem04} alt=""/>
-            <div className="item-content">
-              <div className="main-content">
-                <div className="meta-category">
-                  <span>Fashion</span>
-                </div>
-                <a href="post-details.html"><h4>Responsive and Mobile Ready Layouts</h4></a>
-                <ul className="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 18, 2020</a></li>
-                  <li><a href="#">48 Comments</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <img src={bannerItem05} alt=""/>
-            <div className="item-content">
-              <div className="main-content">
-                <div className="meta-category">
-                  <span>Nature</span>
-                </div>
-                <a href="post-details.html"><h4>Cras congue sed augue id ullamcorper</h4></a>
-                <ul className="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 24, 2020</a></li>
-                  <li><a href="#">64 Comments</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <img src={bannerItem06} alt=""/>
-            <div className="item-content">
-              <div className="main-content">
-                <div className="meta-category">
-                  <span>Lifestyle</span>
-                </div>
-                <a href="post-details.html"><h4>Suspendisse nec aliquet ligula</h4></a>
-                <ul className="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 26, 2020</a></li>
-                  <li><a href="#">72 Comments</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <OwlCarousel className="owl-banner">
+            {randomPosts.map((post) => {
+              const { id, title, image, category_names } = post;
+              return (
+                <section className="item" key={id}>
+                  <img
+                    src={`http://127.0.0.1:8000${image}`}
+                    alt={title}
+                    style={{ width: "434.33px", height: "375.86px" }}
+                  />
+                  <div className="item-content">
+                    <div className="main-content">
+                      <div className="meta-category">
+                        <span>{category_names}</span>
+                      </div>
+                      <a href={`/post/${id}`}>
+                        <h4>{title}</h4>
+                      </a>
+                      <ul className="post-info">
+                        <li>
+                          <a href="#">admin</a>
+                        </li>
+                        <li>
+                          <a href="#">0</a>
+                        </li>
+                        <li>
+                          <a href="#"> Comments</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              );
+            })}
+          </OwlCarousel>
+        )}
       </div>
     </div>
-    )
+  );
 }
